@@ -10,7 +10,7 @@ RUN echo "update system and install needed deps" \
     && chmod a+x /usr/local/bin/confd \
     && echo "add user" \
     && useradd -ms /bin/bash av-user \
-    && cd && cp -R .bashrc .profile  /home/av-user
+    && cd && cp -R .bashrc .profile  /home/av-user \
     && echo "clean up" \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
